@@ -1,0 +1,234 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #E0F7FF; /* Azul suave de fundo */
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #101547; /* Azul escuro */
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    max-width: 100%; /* Garante que a logo não ultrapasse o limite da tela */
+    width: 100%; /* Faz a logo ocupar a largura total possível */
+    height: auto; /* Mantém a proporção da logo */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00A4E4; /* Azul claro para hover */
+}
+
+/* Seções */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Galeria de Imagens */
+.portfolio .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajuste dinâmico para telas pequenas */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;  /* Garante que a altura da imagem se ajuste automaticamente */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 30rem;
+    margin: 0 auto;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #00A4E4; /* Azul claro ao focar */
+}
+
+button {
+    background-color: #00A4E4; /* Azul claro para os botões */
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #002F6C; /* Azul mais escuro para hover */
+}
+
+/* Rodapé */
+footer {
+    background-color: #002F6C; /* Azul escuro */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 1rem; /* Adiciona espaçamento nas laterais */
+    }
+
+    .gallery {
+        grid-template-columns: 1fr; /* Uma coluna para tela pequena */
+    }
+
+    form {
+        width: 90%; /* Ajusta a largura do formulário */
+    }
+
+    header .logo h1 {
+        font-size: 1.8rem; /* Diminui o tamanho da logo em telas menores */
+        max-width: 80%; /* Limita o tamanho da logo */
+        margin: 0 auto; /* Centraliza a logo */
+    }
+
+    header nav ul li a {
+        font-size: 1rem; /* Menor tamanho de texto para links no menu */
+    }
+
+    /* Ajustando o padding das seções */
+    section {
+        padding: 3rem 1rem;
+    }
+
+    /* Ajustando as fontes em dispositivos pequenos */
+    body {
+        font-size: 0.95rem;
+    }
+}
+
+/* Estilo para a página "Esqueci minha senha" */
+.forgot-password {
+    max-width: 400px;
+    margin: 5rem auto;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.forgot-password h2 {
+    color: #002F6C; /* Azul escuro */
+    margin-bottom: 2rem;
+}
+
+.forgot-password form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.forgot-password input {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.forgot-password input:focus {
+    border-color: #00A4E4; /* Azul claro ao focar */
+}
+
+.forgot-password button {
+    background-color: #00A4E4; /* Azul claro */
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.forgot-password button:hover {
+    background-color: #002F6C; /* Azul escuro para hover */
+}
+
+.forgot-password p {
+    margin-top: 2rem;
+}
+
+.forgot-password p a {
+    color: #00A4E4; /* Azul claro */
+    text-decoration: none;
+}
+
+.forgot-password p a:hover {
+    text-decoration: underline;
+}
